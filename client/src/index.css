@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/* Custom variables and root styles for Halı Yıkama */
+@theme {
+  --color-primary: #3b82f6; /* Blue-500 */
+  --color-primary-dark: #2563eb; /* Blue-600 */
+  --color-secondary: #0f172a; /* Slate-900 */
+  --color-background: #f8fafc; /* Slate-50 */
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-secondary);
+}
+
+/* Global Print Styles - Professional Reporting */
+@media print {
+  aside, 
+  nav, 
+  header, 
+  button, 
+  .no-print,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  body, main {
+    background-color: white !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .flex-1 {
+    overflow: visible !important;
+  }
+
+  .shadow-sm, .shadow-md, .shadow-lg, .shadow-xl {
+    box-shadow: none !important;
+    border: 1px solid #e2e8f0 !important;
+  }
+
+  a[href]:after {
+    content: none !important;
+  }
+
+  .grid {
+    display: block !important;
+  }
+
+  .grid > div {
+    margin-bottom: 2rem;
+    page-break-inside: avoid;
+  }
+
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+  }
+
+  th, td {
+    border-bottom: 1px solid #e2e8f0 !important;
+  }
+
+  h1 {
+    font-size: 24pt !important;
+    margin-bottom: 20pt !important;
+    color: black !important;
+  }
+
+  .print-header {
+    display: block !important;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #3b82f6;
+    padding-bottom: 10px;
+  }
+}
+
+.print-header {
+  display: none;
+}

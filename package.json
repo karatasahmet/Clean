@@ -1,0 +1,13 @@
+{
+  "name": "hal-yikama-otomasyon",
+  "version": "1.0.0",
+  "description": "Halı Yıkama Otomasyonu",
+  "scripts": {
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && node index.js",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\""
+  },
+  "dependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
