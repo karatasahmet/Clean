@@ -15,10 +15,11 @@ import Login from './pages/Login';
 
 // Protected Route Component
 const ProtectedRoute = ({ children }) => {
-  const token = localStorage.getItem('token');
-  if (!token) {
-    return <Navigate to="/login" replace />;
-  }
+  // Bypassing login for development as per user request
+  // const token = localStorage.getItem('token');
+  // if (!token) {
+  //   return <Navigate to="/login" replace />;
+  // }
   return children ? children : <Outlet />;
 };
 
